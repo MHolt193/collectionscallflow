@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections Call Flow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="titlecontainer">
+      <h1>Collections Call Flow</h1>
+    </div>
+    <form class="container">
+      <div>
+        <input type="checkbox" name="verify" id="verify" />
+        <label for="verify">1) Verify into account</label>
+      </div>
+      <div>
+        <input type="checkbox" name="legal" id="legal" />
+        <label for="legal">2) Check State Legalities</label>
+      </div>
+      <div>
+        <input type="checkbox" name="status" id="status" />
+        <label for="status">3) Provide status of account and total due</label>
+      </div>
+      <div>
+        <input type="checkbox" name="help" id="help" />
+        <label for="help">4) Willing to help statement and build rapport</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="rfd" id="rfd" />
+        <label for="rfd"
+          >5) If client states unable to pay TDU - ask for RFD</label
+        >
+        <input
+          type="text"
+          id="reason"
+          style="display: none"
+          placeholder="TYPE RFD HERE"
+        />
+      </div>
+      <div>
+        <input type="checkbox" name="acknowledge" id="acknowledge" />
+        <label for="acknowledge">6) Listen and acknowledge the RFD</label>
+      </div>
+      <div>
+        <input type="checkbox" name="commit" id="commit" />
+        <label for="commit"
+          >7) Ask for the most the client can commit to at this time - use the
+          information to negotiate - move down the BVH - (we want the client to
+          provide the amount they can pay) - negotiate up
+        </label>
+      </div>
+      <div>
+        <input type="checkbox" name="asof" id="asof" />
+        <label for="asof"
+          >8) If the client states the are unable to pay - utilize alternate
+          sources (Next pay day if working - savings - unemployment - car/house
+          note deferral - 401k - 211.org, ect - what is relevant to the
+          situation)
+        </label>
+      </div>
+      <div>
+        <input type="checkbox" name="homework" id="homework" />
+        <label for="homework">9) Provide homework</label>
+      </div>
+      <div>
+        <input type="checkbox" name="vaig" id="vaig" />
+        <label for="vaig">10) Vaig account</label>
+      </div>
+      <div class="btn-container">
+        <button type="reset" class="btn" id="reset">Reset</button>
+      </div>
+      <div class="freeFormNotes">
+        <h3>Generated Notes</h3>
+        <div class="textarea">
+          <textarea
+            id="notesarea"
+            name="notesarea"
+            rows="5"
+            cols="65"
+          ></textarea>
+          <div class="copySuccess"><p>✔️ Notes Coppied Successfully</p></div>
+        </div>
+        <button type="reset" id="copyNotes" class="btn">Copy Notes</button>
+        <button type="reset" id="wvNotes" class="btn">WV NML NO ATTNY</button>
+      </div>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
