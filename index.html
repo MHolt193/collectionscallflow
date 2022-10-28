@@ -87,10 +87,20 @@
           ></textarea>
           <div class="copySuccess"><p>✔️ Notes Coppied Successfully</p></div>
         </div>
+        <div class="buttonContainer">
         <button type="reset" id="copyNotes" class="btn">Copy Notes</button>
         <button type="reset" id="wvNotes" class="btn">WV NML NO ATTNY</button>
+        <button type="button" id="openModal" class="btn">Balance Disclosure</button>
+      </div>
       </div>
     </form>
+    <div class="balanceModal">
+      <div class="modalHead">
+      <h3>Balance Disclosure</h3> <button id="closeModal">X</button></div>
+      <p>"This is an estimate and may not cover interest, fees, or charges that have not posted as of todays date. Please refer to your next statement for aditional information"</p>
+      <p>if customer plans to pay BIF</p>
+      <p>"If the amount provided does not cover all additional amounts billed between today and your next billing statement, you may need to payan additional amount in the following billing cycle. If the amount provided exceeds the total amount due on your next billing statement, your account may have a credit balance that you may request to have refunded or we will refund it to you within the next three months"</p>
+    </div>
 
     <script src="app.js"></script>
   </body>

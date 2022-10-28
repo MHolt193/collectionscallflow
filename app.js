@@ -12,8 +12,13 @@ const notesArea = document.getElementById("notesarea");
 const reason = document.getElementById("reason");
 const copyNotes = document.getElementById("copyNotes");
 const wvNotes = document.getElementById("wvNotes");
-const copySuccess = document.querySelector('.copySuccess')
+const copySuccess = document.querySelector(".copySuccess");
 const reset = document.getElementById("reset");
+const closeModal = document.getElementById("closeModal");
+const balanceModal = document.querySelector(".balanceModal");
+const openModal = document.getElementById("openModal");
+
+let modalOpen = false;
 
 
 verify.onclick = () => {
@@ -86,35 +91,46 @@ copyNotes.onclick = () => {
   notesArea.select(notesArea.value);
   navigator.clipboard.writeText(notesArea.value.toUpperCase());
   reason.style.display = "none";
-  copyNotes.style.transform = 'scale(.9)'
+  copyNotes.style.transform = "scale(.9)";
   setTimeout(() => {
-    copyNotes.style.transform = 'scale(1)'
-  },100)
-  copySuccess.style.display = 'flex'
+    copyNotes.style.transform = "scale(1)";
+  }, 100);
+  copySuccess.style.display = "flex";
   setTimeout(() => {
-  copySuccess.style.display = 'none'
-  }, 400)
+    copySuccess.style.display = "none";
+  }, 400);
 };
 
 reset.onclick = () => {
   reason.style.display = "none";
-  reset.style.transform = 'scale(.9)'
+  reset.style.transform = "scale(.9)";
   setTimeout(() => {
-    reset.style.transform = 'scale(1)'
-  },100)
+    reset.style.transform = "scale(1)";
+  }, 100);
 };
 
 wvNotes.onclick = () => {
-  navigator.clipboard.writeText('**LS** NML// NO ATTNY PPN')
-  wvNotes.style.transform = 'scale(.9)'
+  navigator.clipboard.writeText("**LS** NML// NO ATTNY PPN");
+  wvNotes.style.transform = "scale(.9)";
   setTimeout(() => {
-    wvNotes.style.transform = 'scale(1)'
-  },100)
-  copySuccess.innerHTML = '<p>✔️ WV Note Coppied Succesfully</p>'
-  copySuccess.style.display = 'flex'
+    wvNotes.style.transform = "scale(1)";
+  }, 100);
+  copySuccess.innerHTML = "<p>✔️ WV Note Coppied Succesfully</p>";
+  copySuccess.style.display = "flex";
   setTimeout(() => {
-  copySuccess.style.display = 'none'
-  copySuccess.innerHTML = '<p>✔️ Notes Coppied Successfully</p>'
-  }, 400)
-
+    copySuccess.style.display = "none";
+    copySuccess.innerHTML = "<p>✔️ Notes Coppied Successfully</p>";
+  }, 400);
+};
+closeModal.onclick = () => {
+  modalOpen = false
+    balanceModal.classList.remove('showModal');
+};
+openModal.onclick = () => {
+  modalOpen = !modalOpen
+  if (modalOpen) {
+    balanceModal.classList.add('showModal')
+  }else{
+    balanceModal.classList.remove('showModal')
+  }
 }
