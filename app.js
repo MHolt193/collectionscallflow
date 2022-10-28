@@ -13,6 +13,8 @@ const reason = document.getElementById("reason");
 const copyNotes = document.getElementById("copyNotes");
 const wvNotes = document.getElementById("wvNotes");
 const copySuccess = document.querySelector('.copySuccess')
+const reset = document.getElementById("reset");
+
 
 verify.onclick = () => {
   let verifyText = "VERIFIED INTO ACCOUNT// ";
@@ -34,11 +36,9 @@ rfd.onclick = () => {
   let rfdText = `ASKED RFD//`;
   if (rfd.checked == true) {
     reason.style.display = "block";
-    form.style.height = "380px";
     notesArea.value += rfdText;
   } else if (rfd.checked == false) {
     reason.style.display = "none";
-    form.style.height = "370px";
     notesArea.value = notesArea.value.replace(rfdText, "");
   }
 };
@@ -95,14 +95,13 @@ copyNotes.onclick = () => {
   copySuccess.style.display = 'none'
   }, 400)
 };
-const reset = document.getElementById("reset");
+
 reset.onclick = () => {
   reason.style.display = "none";
   reset.style.transform = 'scale(.9)'
   setTimeout(() => {
     reset.style.transform = 'scale(1)'
   },100)
-  
 };
 
 wvNotes.onclick = () => {

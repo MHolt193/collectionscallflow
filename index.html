@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="titlecontainer">
-      <h1>Collections Call Flow</h1>
-    </div>
-    <form class="container">
-      <div>
+    <form class="form">
+      <div class="container">
+      <div class="titlecontainer">
+        <h1>Collections Call Flow</h1>
+      </div>
+      <div class="listItem">
         <input type="checkbox" name="verify" id="verify" />
         <label for="verify">1) Verify into account</label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="legal" id="legal" />
         <label for="legal">2) Check State Legalities</label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="status" id="status" />
         <label for="status">3) Provide status of account and total due</label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="help" id="help" />
         <label for="help">4) Willing to help statement and build rapport</label>
       </div>
 
-      <div>
+      <div class="rfdListItem">
+        <div class="listItem">
         <input type="checkbox" name="rfd" id="rfd" />
         <label for="rfd"
           >5) If client states unable to pay TDU - ask for RFD</label
         >
+        </div>
         <input
           type="text"
           id="reason"
@@ -40,11 +43,11 @@
           placeholder="TYPE RFD HERE"
         />
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="acknowledge" id="acknowledge" />
         <label for="acknowledge">6) Listen and acknowledge the RFD</label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="commit" id="commit" />
         <label for="commit"
           >7) Ask for the most the client can commit to at this time - use the
@@ -52,7 +55,7 @@
           provide the amount they can pay) - negotiate up
         </label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="asof" id="asof" />
         <label for="asof"
           >8) If the client states the are unable to pay - utilize alternate
@@ -61,19 +64,20 @@
           situation)
         </label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="homework" id="homework" />
         <label for="homework">9) Provide homework</label>
       </div>
-      <div>
+      <div class="listItem">
         <input type="checkbox" name="vaig" id="vaig" />
         <label for="vaig">10) Vaig account</label>
       </div>
       <div class="btn-container">
         <button type="reset" class="btn" id="reset">Reset</button>
       </div>
+    </div>
       <div class="freeFormNotes">
-        <h3>Generated Notes</h3>
+        <h2>Generated Notes</h3>
         <div class="textarea">
           <textarea
             id="notesarea"
